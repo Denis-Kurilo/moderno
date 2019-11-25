@@ -13,7 +13,8 @@ gulp.task('clean', async function(){
 
 gulp.task('scss',function(){
 	return gulp.src('app/scss/**/*.scss')
-		.pipe(sass({outputStyle: 'compressed'}))
+		// .pipe(sass({outputStyle: 'compressed'}))
+		.pipe(sass({outputStyle: 'expanded'}))
 		.pipe(autoprefixer({
 			browsers: ['last 8 versions']
 		}))
@@ -73,8 +74,8 @@ gulp.task('export', function(){
 		.pipe(gulp.dest('dist/js'))
 	let buildFonts = gulp.src('app/fonts/**/*.*')
 		.pipe(gulp.dest('dist/fonts'))
-	let buildImg = gulp.src('app/img/**/*.*')
-		.pipe(gulp.dest('dist/img'))
+	let buildImg = gulp.src('app/images/**/*.*')
+		.pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('watch',function(){
