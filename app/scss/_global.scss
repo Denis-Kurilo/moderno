@@ -37,7 +37,7 @@ body{
 
 .title{
   color: $bg;
-  font-weight: 700;
+  @include f700;
   font-size: 36px;
   line-height: 36px;
   text-align: center;

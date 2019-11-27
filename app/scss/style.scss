@@ -72,13 +72,13 @@
 	&-title{
 		margin-bottom: 28px;
 		font-size: 48px;
-		font-weight: 700;
+		@include f700;
 		line-height: 72px;
 	}
 	&-text{
 		margin-bottom: 50px;
 		font-size: 20px;
-		font-weight: 500;
+		@include f500;
 		line-height: 30px;
 	}
 	&-form{
@@ -94,7 +94,7 @@
 			height: 56px;
 			border: none;
 			font-size: 14px;
-			font-weight: 500;
+			@include f500;
 			
 			&:focus{
 				border: 1px solid $green;
@@ -102,7 +102,7 @@
 			
 			&::placeholder{
 				color: #90A4AE;
-				font-weight: 500;
+				@include f500;
 				padding: 0 60px 0 25px;
 			}
 		}
@@ -171,7 +171,7 @@
         align-items: center;
         padding: 10px 30px;
         min-height: 90px;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
 	}
 	&-name{
@@ -189,7 +189,7 @@
 	}
 	&-price{
 		font-size: 20px;
-		font-weight: 700;
+		@include f700;
 		color: $bg;
 	}
 	&-info{
@@ -215,12 +215,9 @@
 		}
 		span{
 			font-size: 14px;
-			font-weight: 500;
+			@include f500;
 		}
 	}
-	/* &-star{
-		color: $bg;
-	} */
 }
 .products__bottom-btn{
 	text-align: center;
@@ -287,5 +284,80 @@
 		}
 	}
 }
-
 // end-slider-products
+
+// advantages
+.advantages{
+	background-color: $bg;
+	padding: 110px 0;
+}
+.advantages__title{
+	color: #FFF;
+}
+.advantages__inner{
+	display: flex;
+    justify-content: space-between;
+}
+.advantages__item{
+	max-width: 370px;
+	text-align: center;
+	padding: 0 15px;
+
+	&:hover{
+		.advantages__item-images{
+			background-color: $green;
+		}
+		.advantages__item-title{
+			color: $green;
+		}
+		.advantages__item-images{
+			svg{
+				fill: #fff;
+			}
+		}
+	}
+	
+	&-images{
+		width: 114px;
+		height: 114px;
+		background-color: #FFF;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        transition: all .5s;
+        
+        svg{
+        	transition: all .3s;
+        }
+	}
+
+	&-title{
+		margin-bottom: 25px;
+		font-size: 24px;
+		color: #FFF;
+		@include f500;
+		transition: all .5s;
+	}
+		
+	&-text{
+		font-size: 15px;
+	}
+}
+.ico-1{
+	svg{
+		width: 50px;
+	}
+}
+.ico-2{
+	svg{
+		width: 70px;
+	}
+}
+.ico-3{
+	svg{
+		width: 86px;
+	}
+}
+//end-advantages
