@@ -254,7 +254,6 @@
 
 // slider-products
 .product-slider{
-	width: 100px;
 	padding: 110px 0 120px;
 }
 .slick-dots{
@@ -361,3 +360,41 @@
 	}
 }
 //end-advantages
+
+//author
+.author{
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__box{
+    	max-width: 650px;
+    	min-height: 215px;
+    	display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        width: 100%;
+    }
+    &__title{
+    	font-size: 30px;
+    	line-height: 30px;
+    	color: #FFF;
+    	margin-right: 45px;
+    	max-width: 260px;
+    	span{
+    		@include f700;
+    	}
+    }
+    &__link{
+    	font-size: 18px;
+    	line-height: 36px;
+    	padding: 14px 40px;
+    	background-color: #FFF;
+    }
+}
+//end-author
