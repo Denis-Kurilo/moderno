@@ -23,7 +23,17 @@ $('.product-slider__inner').slick({
 	slidesToScroll: 4
 });
 
+$('.icon-th-list').on('click', function(){
+    $('.product__item').addClass('list');
+    $('.icon-th-list').addClass('active');
+    $('.icon-th-large').removeClass('active');
+});
+$('.icon-th-large').on('click', function(){
+    $('.product__item').removeClass('list');
+    $('.icon-th-large').addClass('active');
+    $('.icon-th-list').removeClass('active');
+});
+
 //mixitup
 var mixer = mixitup('.products__inner-box');
-
 });
