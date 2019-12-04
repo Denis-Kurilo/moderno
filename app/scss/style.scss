@@ -183,17 +183,20 @@
 		margin-bottom: 15px;
 	}
 }
-.backet__menu{
+.circle__menu{
 	border-top: 0px solid #d3d3d3;
 	position: absolute;
 	top: 70px;
 	right: 0;
 	height: 0;
 	overflow: hidden;
+	transition: all .3s;
 }
 
 .user__box,
-.backet__box{
+.backet__box,
+.message__box,
+.notification__box{
 	position: relative;
 	height: 70px;
 	margin-top: 20px;
@@ -208,33 +211,51 @@
 	}
 }
 
-.backet__box{
+.backet__box,
+.message__box,
+.notification__box{
     margin-left: 15px;
     padding-top: 8px;
-    height: 70px;
+    //height: 70px;
     
     &:hover{
-    	.backet__menu{
-    		height: 100%;
-    		overflow: unset;
+    	.header__circle::before{
+    		color: $bg;
+    	}
+    	.circle__menu{
+    		// border-width: 1px;
+    		overflow: hidden;
+    		height: auto;
+    	}
+    	.circle__item{
+    		padding: 23px 23px;
     		border-width: 1px;
     	}
     }
 }
 
-.backet__item{
+.circle__item{
 	background-color: #FFF;
-	border: 1px solid #e0e0e0;
+	border: 0px solid #e0e0e0;
 	border-top: none;
-	padding: 23px;
+	padding: 0 23px;
 	display: flex; 
-    align-items: center;
-    width: 269px;
+  align-items: center;
+  width: 269px;
+  position: relative;
+  transition: all .3s;
+  &::before{
+  	position: absolute;
+  	top: 27px;
+  	right: 28px;
+  	color: #b0bec5;
+  	font-size: 16px;
+  }
 }
-.backet__images{
+.circle__images{
 	margin-right: 15px;
 }
-.backet__info{
+.circle__info{
 	&-name{
 		@inclide f500;
 		color: $bg;
@@ -246,6 +267,10 @@
 		@inclide f500;
 		color: #000;
 		font-size: 16px;
+	}
+	&-date{
+		font-size: 10px;
+		color: #707070;
 	}
 }
 .backet__summ{
@@ -277,6 +302,22 @@
 	width: 122px;
 	margin-left: 6px;
 	background-color: $red;
+}
+
+.notification__menu,
+.message__menu{
+	.circle__images{
+		margin-right: 20px;
+		width: 48px;
+		height: 48px;
+    border-radius: 50%;
+	}
+	.circle__info{
+		line-height: 18px;
+	}
+}
+.icons-color{
+	color: $tomate;
 }
 
 //end-header
