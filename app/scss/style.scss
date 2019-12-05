@@ -1,9 +1,11 @@
 @import "vars";
 @import "global";
 @import "fonts";
-@import "media";
  
 //header
+.header{
+	background-color: #FFF;
+}
 .header-top-inner{
 	display: flex; 
     justify-content: space-between;
@@ -121,12 +123,12 @@
 }
 
 .basket{
+	margin-right: 20px;
 	span{
 		background-color: $green;
 	}
 }
 .user{
-	margin-left: 20px;
 	margin-right: 25px;
 	padding-right: 20px;
 	position: relative;
@@ -191,6 +193,7 @@
 	height: 0;
 	overflow: hidden;
 	transition: all .3s;
+	z-index: 1;
 }
 
 .user__box,
@@ -320,6 +323,10 @@
 	color: $tomate;
 }
 
+.header__btn-menu,
+.menu__btn{
+	display: none;
+}
 //end-header
 
 //search
@@ -1215,3 +1222,7 @@ button.icon-unsorted{
 	}
 }
 //end-product-page
+
+
+//media
+@import "media";
