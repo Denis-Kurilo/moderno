@@ -53,7 +53,8 @@ $('.menu__btn').on('click', function(){
     $('.menu__list').slideToggle();
 });
 
-
+//fancybox
+$(".fancybox").fancybox();
 
 
 //mixitup

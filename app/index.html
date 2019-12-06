@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Moderno</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">  
@@ -156,7 +156,7 @@
 									</div>	
 								</div>
 								
-								<a href="#" class="header__btn header__btn-login">Login</a>
+								<a class="header__btn header__btn-login" data-fancybox data-src="#modal" href="javascript:;">Login</a>
 								<a href="#" class="header__btn header__btn-Logout header__btn-login--off">Logout</a>
 								<a href="#" class="header__btn header__btn-register">Register</a>
 							</div>
@@ -979,8 +979,26 @@
 
 
 
+	<!-- modal-popup -->
+	<div style="display: none;" id="modal">
+		<div class="login__wrapper">
+			<div class="login__title">Login</div>
+		  <form>
+		  	<label class="login__label-name">
+		  		<input type="text" placeholder="Name" required>
+		  	</label>
 
-
+		  	<label class="login__label-pass">
+		  		<input type="password" placeholder="Password" required>
+		  	</label>
+		  	<button type="submit">Submit</button>
+		  	<a href="#" class="creat-acc">Creat An Account?</a>
+		  	<a href="#" class="lost-pass">Lost Password?</a>
+		  </form>
+		</div>	
+		</div>
+	  
+	<!-- modal-popup-end -->
 
 
 
