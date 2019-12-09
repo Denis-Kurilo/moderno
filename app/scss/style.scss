@@ -1951,7 +1951,138 @@ button.icon-unsorted{
 }
 /* settings-end */
 
-
+/* Profile */
+.profile__inner{
+	display: flex;
+	margin-bottom: 30px;
+}
+.profile__aside{
+	margin-right: 30px;
+	max-width: 271px;
+	width: 100%;
+	
+	& .footer__social-link{
+		margin-bottom: 30px;
+	}
+}
+// .profile__aside{
+// 	.aside__item{
+// 		max-width: 271px;
+// 		width: 100%;
+// 	}
+// }
+.profile-status{
+	font-size: 13px;
+	color: #707070;
+	padding: 2px 9px 2px 30px;
+	border: 1px solid #d6d6d6;
+	position: relative;
+	
+	&::before{
+		content: "";
+		position: absolute;
+		left: 11px;
+		top: 9px;
+		width: 9px;
+		height: 9px;
+    border-radius: 50%;
+	}
+}
+.profile-on{
+	&::before{
+		background-color: $green;
+	}
+}
+.profile-off{
+	&::before{
+		background-color: $red;
+	}
+}
+.profile__aside-btn{
+	margin-bottom: 13px;
+	text-align: center;
+}
+.profile__aside-message{
+	margin-bottom: 17px;
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	color: #FFF;
+	@include f700;
+	padding: 18px 10px;
+	position: relative;
+	background-color: $text;
+	box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+	&::before{
+		content: "\f003";
+		font-family: 'icomoon';
+		position: absolute;
+		top: 17px;
+		left: 50px;
+	}
+}
+.profile__aside-following{
+	margin-bottom: 17px;
+	display: block;
+	width: 100%;
+	color: #FFF;
+	font-size: 16px;
+	@include f500;
+	background-color: $green;
+	padding: 18px 10px;
+	box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+}
+.profile__content{
+	width: 100%;
+}
+.profile__banner{
+	padding: 20px;
+	border: 1px solid #dedede;
+	margin-bottom: 35px;
+	background-color: #FFF;
+}
+.profile__banner-images{
+	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 332px;
+}
+.profile__items{
+	display: flex;
+	border: 1px solid #dedede;
+}
+.profile__item{
+	width: 25%;
+	background-color: #FFF;
+	text-align: center;
+	padding: 20px 5px 17px;
+	
+	& + .profile__item{
+		border-left: 1px solid #dedede;
+	}
+}
+.profile__item-title{
+	font-size: 14px;
+	color: $bg;
+	@include f500;
+}
+.profile__item-content{
+	font-size: 14px;
+	color: #707070;
+	@include f500;
+	&.profile__item-sales{
+		color: $bg;
+	}
+}
+.profile-settings{
+	
+}
+.personal-box{
+	background-color: #FFF;
+	padding: 35px 40px 25px;
+	border: 1px solid #dedede;
+}
+/* Profile-end */
 
 //media
 @import "media";
