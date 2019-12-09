@@ -2095,7 +2095,6 @@ button.icon-unsorted{
 			}
 		}
 	}
-	
 }
 .personal-box{
 	background-color: #FFF;
@@ -2144,6 +2143,71 @@ button.icon-unsorted{
     }
 }
 /* Profile-end */
+
+/* upload */
+.upload__inner{
+	display: block;
+	background-color: #FFF;
+	border: 1px solid #d7d7d7;
+	margin-bottom: 110px;
+	
+	 button{
+		color: #FFF;
+		background-color: $green;
+		border: none;
+		padding: 15px 36px;
+		margin-left: 175px;
+		cursor: pointer;
+	} 
+}
+.upload__inner-title{
+	padding: 16px 35px 18px;
+	@include f500;
+	font-size: 24px;
+	color: $bg;
+	border-bottom: 1px solid #d7d7d7;
+	margin-bottom: 40px;
+}
+.upload__inner-content{
+	margin-bottom: 30px;
+	padding-left: 45px;
+	padding-right: 50px;
+}
+.upload__line{
+	margin-bottom: 25px;
+	display: flex;
+    
+    label{
+    	min-width: 175px;
+    	padding-top: 5px;
+    	padding-right: 15px;
+    	color: #444;
+    	span{
+    		color: $green;
+    	}
+    	&::placeholder{
+    		color: #707070;
+    	}
+    }
+    select,
+    input,
+    textarea{
+    	width: 100%;
+    	display: block;
+    	border: 1px solid #d7d7d7;
+    	height: 40px;
+    	background-color: #f9f9f9;
+    	padding: 0 18px;
+    }
+
+.textarea{
+	resize: none;
+	height: 150px;
+	padding: 8px 18px;
+}
+
+}
+/* upload-end */
 
 //media
 @import "media";
