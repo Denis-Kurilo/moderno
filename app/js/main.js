@@ -56,6 +56,11 @@ $('.menu__btn').on('click', function(){
 //fancybox
 $(".fancybox").fancybox();
 
+//jquery form style
+$('input[type="file"], select').styler({
+    fileBrowse: "Choose File",
+    filePlaceholder: "No File Choosen"
+});
 
 //mixitup
 // var mixer = mixitup('.products__inner-box');
