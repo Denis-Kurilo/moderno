@@ -1,6 +1,6 @@
 @import "vars";
 @import "global";
-@import "fonts"; 
+@import "fonts";  
  
 //header
 .header{ 
@@ -1525,6 +1525,26 @@ button.icon-unsorted{
 	display: flex;
   justify-content: space-between;
   padding: 30px 0;
+  
+  .jq-selectbox__select {
+    height: 30px;
+    padding: 0 25px 0 10px;
+    border: 1px solid #d6d6d6;
+    border-bottom-color: #d6d6d6;
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #70838d;
+    text-transform: capitalize;
+    text-shadow: none;
+	}
+	.jq-selectbox__trigger{
+		border-left: none;
+	}
+	.jq-selectbox__trigger-arrow{
+		border-top: 5px solid $green;
+	}
 }
 .price__product{
 	font-size: 22px;
@@ -1921,7 +1941,8 @@ button.icon-unsorted{
 	padding: 30px 35px 80px;
 
 .jq-selectbox{
-	width: 69%;
+	max-width: 540px;
+	width: 100%;
 }
 .jq-selectbox__select {
     height: 40px;
@@ -1959,7 +1980,7 @@ button.icon-unsorted{
 		padding: 0 10px;
 	}
 	select{
-		max-width: 540px;
+		
 		width: 100%;
 		height: 40px;
 		background-color: #f9f9f9;
