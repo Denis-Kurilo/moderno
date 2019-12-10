@@ -1,6 +1,6 @@
 @import "vars";
 @import "global";
-@import "fonts";  
+@import "fonts";   
  
 //header
 .header{ 
@@ -977,13 +977,21 @@
 	padding-bottom: 110px;
 }
 .product-page__aside{
-	margin-right: 30px;
 	width: 270px;
-	background-color: #FFF;
-	padding: 0 32px 32px;
 	margin-bottom: 30px;
-	border: 1px solid #dedede;
+	margin-right: 30px;	
 	
+	.category, 
+	.price-range, 
+	.top-sellers{
+		background-color: #FFF;
+		padding: 0 35px 35px;
+		border: 1px solid #dedede;
+		
+	}
+	.asside__item{
+		margin-top: 30px;
+	}
 }
 .asside__item{
 	// border: 1px solid #dedede;
@@ -1181,9 +1189,10 @@ button.icon-unsorted{
 .product-page__content{
 	width: 100%;
 	.product__item{
-		max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
 		background-color: #FFF;
 		transition: all .5s;
+		margin-left: 30px;
 	}
 	.product__item-img{
 		min-height: 180px;
@@ -1210,9 +1219,10 @@ button.icon-unsorted{
 }
 .product-page__items{
 	display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: -30px;
 }
 .pagination__list{
 	li{
@@ -1282,6 +1292,7 @@ button.icon-unsorted{
 .product__item{
 	&.list{
 		max-width: 100%;
+        flex-basis: 100%;
 		
 		.product__item-img{
 			width: 240px;
@@ -1338,7 +1349,7 @@ button.icon-unsorted{
 	display: flex;
 	justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
 }
 .product-one__images{
 	max-width: 829px;
@@ -1519,7 +1530,7 @@ button.icon-unsorted{
 	border: 1px solid #dcdcdc;
 	padding-left: 25px;
 	margin-bottom: 30px;
-	padding: 30px 25px;
+	padding: 30px 20px;
 }
 .price__box{
 	display: flex;
@@ -1545,6 +1556,10 @@ button.icon-unsorted{
 	.jq-selectbox__trigger-arrow{
 		border-top: 5px solid $green;
 	}
+}
+.product-one__aside{
+	max-width: 270px;
+	width: 100%;
 }
 .price__product{
 	font-size: 22px;
@@ -1838,7 +1853,7 @@ button.icon-unsorted{
 		background-color: #f1f4f5;
 		width: 350px;
 		margin-bottom: 30px;
-		display: inline-block;
+		display: block;
 		
 		&::placeholder{
 			font-size: 15px;
@@ -2110,6 +2125,7 @@ button.icon-unsorted{
 .profile__item-content{
 	font-size: 14px;
 	color: #707070;
+	display: inline-block;
 	@include f500;
 	&.profile__item-sales{
 		color: $bg;

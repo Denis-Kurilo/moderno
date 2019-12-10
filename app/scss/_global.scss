@@ -6,13 +6,15 @@ html{
 *::after{
     box-sizing: inherit;
 }
-html, body{
-   overflow-x: hidden;
-}
 html,
 body{
   height: 100%;
+  overflow-x: hidden;
 }
+body{
+  min-width: 320px;
+}
+
 a{
   display: inline-block;
   text-decoration: none;
